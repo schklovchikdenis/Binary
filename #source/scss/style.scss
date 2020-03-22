@@ -53,6 +53,13 @@
    display: flex;
    font-size: 0;
 }
+@mixin flexboxinline() {
+   display: -webkit-inline-flex;
+   display: -moz-inline-flex;
+   display: -ms-inline-flex;
+   display: -o-inline-flex;
+   display: inline-flex;
+}
 @mixin flexorder($val) {
    -webkit-box-ordinal-group: $val;
    -moz-box-ordinal-group: $val;
@@ -220,27 +227,44 @@ h6 {
    flex: 1 1 auto;
    position: relative;
    text-align: center;
+   @include flexbox();
+   justify-content: center;
+   padding: 50px 0px;
+   @media screen and (max-width: $md3+px) , screen and (max-height: 600px) {
+      padding: 20px 0px;
+   }
    // .mainblock__content
    &__content {
       position: relative;
       z-index: 1;
+      flex: 1 1 auto;
+      .container {
+         height: 100%;
+         @include flexbox();
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+      }
    }
    // .mainblock__logo
    &__logo {
    }
    // .mainblock__text
    &__text {
-		color: #ffffff;
-		&:after{
-			content: '';
-			position: absolute;
-			bottom: 0px;
-			left: 50%;
-			margin: 0px 0px 0px -52.5px;
-			width: 105px;
-			height: 2px;
-			background-color: #fff;
-		}
+      color: #ffffff;
+      position: relative;
+      padding: 0px 0px 45px 0px;
+      margin: 30px;
+      &:after {
+         content: "";
+         position: absolute;
+         bottom: 0px;
+         left: 50%;
+         margin: 0px 0px 0px -52.5px;
+         width: 105px;
+         height: 2px;
+         background-color: #fff;
+      }
    }
    // .mainblock__title
    &__title {
@@ -249,6 +273,11 @@ h6 {
       text-transform: uppercase;
       font-weight: 900;
       letter-spacing: 5.43px;
+      margin: 0px 0px 10px 0px;
+      @media screen and (max-width: $md3+px) , screen and (max-height: 600px) {
+         font-size: 25px;
+         line-height: 30px;
+      }
    }
    // .mainblock__subtitle
    &__subtitle {
@@ -258,12 +287,19 @@ h6 {
    }
    // .mainblock__footer
    &__footer {
+      @include flexboxinline();
+      flex-direction: column;
    }
-   // .mainblock__btn
-   &__btn {
+   &__btn{
+      margin: 0px 0px 60px 0px;
+      @media screen and (max-width: $md2+px) , screen and (max-height: 700px) {
+         margin: 0px 0px 30px 0px;
+      }
    }
    // .mainblock__arrow
    &__arrow {
+      position: relative;
+      animation: arrow 2s infinite ease;
    }
    // .mainblock__img
    &__img {
@@ -272,6 +308,17 @@ h6 {
       height: 100%;
       top: 0;
       left: 0;
+   }
+   @keyframes arrow {
+      0% {
+         top: 0;
+      }
+      50% {
+         top: 10%;
+      }
+      100%{
+         top: 0%;
+      }
    }
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
