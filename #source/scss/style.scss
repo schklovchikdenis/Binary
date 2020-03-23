@@ -230,7 +230,7 @@ h6 {
    @include flexbox();
    justify-content: center;
    padding: 50px 0px;
-   @media screen and (max-width: $md3+px) , screen and (max-height: 600px) {
+   @media screen and (max-width: $md3+px), screen and (max-height: 600px) {
       padding: 20px 0px;
    }
    // .mainblock__content
@@ -274,7 +274,7 @@ h6 {
       font-weight: 900;
       letter-spacing: 5.43px;
       margin: 0px 0px 10px 0px;
-      @media screen and (max-width: $md3+px) , screen and (max-height: 600px) {
+      @media screen and (max-width: $md3+px), screen and (max-height: 600px) {
          font-size: 25px;
          line-height: 30px;
       }
@@ -290,9 +290,9 @@ h6 {
       @include flexboxinline();
       flex-direction: column;
    }
-   &__btn{
+   &__btn {
       margin: 0px 0px 60px 0px;
-      @media screen and (max-width: $md2+px) , screen and (max-height: 700px) {
+      @media screen and (max-width: $md2+px), screen and (max-height: 700px) {
          margin: 0px 0px 30px 0px;
       }
    }
@@ -303,7 +303,7 @@ h6 {
    }
    // .mainblock__img
    &__img {
-      position: absolute;
+      position: fixed;
       width: 100%;
       height: 100%;
       top: 0;
@@ -316,11 +316,59 @@ h6 {
       50% {
          top: 10%;
       }
-      100%{
+      100% {
          top: 0%;
       }
    }
 }
+//====================================================================================================
+.content {
+   position: relative;
+   background-color: #fff;
+   z-index: 50;
+}
+//====================================================================================================
+
+.menu {
+   // .menu__items
+   &__items {
+      padding: 22px 0px;
+   }
+   // .menu__list
+   &__list {
+      @include flexbox();
+      justify-content: center;
+      align-items: center;
+      li {
+         margin: 0px 25px;
+         @media (max-width:$md3+px){
+            margin: 0px 20px 10px 25px;
+         }
+         @media (max-width:478px){
+            flex: 0 1 25%;
+         }
+      }
+      @media (max-width:$md4+px){
+         flex-wrap: wrap;
+      }
+   }
+   // .menu__link
+   &__link {
+      color: #3c3c3c;
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      @include anim(0.3s, 0s);
+      &:hover {
+         color: #ada074;
+      }
+      // .menu__link_act
+      &_act {
+         color: #ada074;
+      }
+   }
+}
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
