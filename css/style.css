@@ -290,8 +290,87 @@ h6 {
     .menu__link_act {
       color: #ada074; }
 
-.about__header-block {
-  margin: 0px 0px 65px 0px; }
+.about {
+  padding: 0px 0px 60px 0px; }
+  @media (max-width: 767.98px) {
+    .about {
+      margin: 0px 0px 10px 0px; } }
+  .about__header-block {
+    margin: 0px 0px 65px 0px; }
+    @media (max-width: 767.98px) {
+      .about__header-block {
+        margin: 0px 0px 30px 0px; } }
+  .about__body {
+    max-width: 830px;
+    text-align: center;
+    margin: 0px auto; }
+  .about__row {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    margin: 0px -15px; }
+    @media (max-width: 767.98px) {
+      .about__row {
+        display: block; } }
+  .about__column {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 33.333%;
+    flex: 0 1 33.333%;
+    padding: 0px 15px;
+    margin: 0px 0px 30px 0px; }
+  .about__item {
+    text-align: center;
+    max-width: 250px; }
+    @media (max-width: 767.98px) {
+      .about__item {
+        max-width: none; } }
+  .about__icon {
+    border: 1px solid #f2f2f2;
+    border-radius: 50%;
+    width: 92px;
+    height: 92px;
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flex;
+    display: -o-inline-flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0px 0px 40px 0px; }
+    .about__icon_l img {
+      position: relative;
+      left: 7px; }
+    @media (max-width: 767.98px) {
+      .about__icon {
+        margin: 0px 0px 15px 0px; } }
+  .about__title {
+    color: #000000;
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 3.52px;
+    margin: 0px 0px 33px 0px; }
+    @media (max-width: 992.98px) {
+      .about__title {
+        font-size: 18px;
+        margin: 0px 0px 25px 0px; } }
+    @media (max-width: 767.98px) {
+      .about__title {
+        margin: 0px 0px 10px 0px; } }
+  .about__text {
+    color: #868585;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 26px; }
 
 .form-row {
   display: -webkit-box;
