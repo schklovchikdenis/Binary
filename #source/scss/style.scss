@@ -330,6 +330,11 @@ h6 {
 //====================================================================================================
 
 .menu {
+   border-bottom: 1px solid #f2f2f2;
+   padding: 22px 0px;
+   &_mb {
+      margin: 0px 0px 130px 0px;
+   }
    // .menu__items
    &__items {
       padding: 22px 0px;
@@ -341,14 +346,14 @@ h6 {
       align-items: center;
       li {
          margin: 0px 25px;
-         @media (max-width:$md3+px){
+         @media (max-width: $md3+px) {
             margin: 0px 20px 10px 25px;
          }
-         @media (max-width:478px){
+         @media (max-width: 478px) {
             flex: 0 1 25%;
          }
       }
-      @media (max-width:$md4+px){
+      @media (max-width: $md4+px) {
          flex-wrap: wrap;
       }
    }
@@ -366,6 +371,34 @@ h6 {
       &_act {
          color: #ada074;
       }
+   }
+}
+//====================================================================================================
+.about {
+   // .about__header-block
+   &__header-block {
+      margin: 0px 0px 65px 0px;
+   }
+   // .about__body
+   &__body {
+   }
+   // .about__row
+   &__row {
+   }
+   // .about__column
+   &__column {
+   }
+   // .about__item
+   &__item {
+   }
+   // .about__icon
+   &__icon {
+   }
+   // .about__title
+   &__title {
+   }
+   // .about__text
+   &__text {
    }
 }
 
