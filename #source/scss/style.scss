@@ -458,6 +458,35 @@ h6 {
       line-height: 26px;
    }
 }
+//====================================================================================================
+
+.partners {
+   padding: 100px 0px 70px 0px;
+   background: url('../img/partners/bg.jpg') 0 0 no-repeat;
+   // .partners__title
+   &__title {
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 300px;
+      letter-spacing: 1.8px;
+      text-align: center;
+      margin: 0px 0px 90px 0px;
+   }
+   // .partners__items
+   &__items {
+      @include flexbox();
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+   }
+   // .partners__column
+   &__column {
+      padding: 0px 50px;
+   }
+   &__item{
+
+   }
+}
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
