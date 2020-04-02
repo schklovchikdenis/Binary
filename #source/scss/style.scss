@@ -53,6 +53,13 @@
    display: flex;
    font-size: 0;
 }
+@mixin flexboxinline() {
+   display: -webkit-inline-flex;
+   display: -moz-inline-flex;
+   display: -ms-inline-flex;
+   display: -o-inline-flex;
+   display: inline-flex;
+}
 @mixin flexorder($val) {
    -webkit-box-ordinal-group: $val;
    -moz-box-ordinal-group: $val;
@@ -209,38 +216,55 @@ h6 {
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 // @import "popup.scss";
-// @import "header.scss";
+@import "header.scss";
 @import "footer.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>============================================================================================
-//====================================================================================================
+//==================================================================================================
 
 .mainblock {
    flex: 1 1 auto;
    position: relative;
+   @include flexbox();
+   justify-content: center;
    text-align: center;
+   padding: 50px 0px;
+   @media screen and (max-width: $md3+px), screen and (max-height: 600px) {
+      padding: 20px 0px;
+   }
    // .mainblock__content
    &__content {
       position: relative;
       z-index: 1;
+      flex: 1 1 auto;
+      .container {
+         height: 100%;
+         @include flexbox();
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+      }
    }
    // .mainblock__logo
    &__logo {
    }
    // .mainblock__text
    &__text {
-		color: #ffffff;
-		&:after{
-			content: '';
-			position: absolute;
-			bottom: 0px;
-			left: 50%;
-			margin: 0px 0px 0px -52.5px;
-			width: 105px;
-			height: 2px;
-			background-color: #fff;
-		}
+      color: #ffffff;
+      position: relative;
+      padding: 0px 0px 45px 0px;
+      margin: 30px 0px;
+      &:after {
+         content: "";
+         position: absolute;
+         bottom: 0px;
+         left: 50%;
+         margin: 0px 0px 0px -52.5px;
+         width: 105px;
+         height: 2px;
+         background-color: #fff;
+      }
    }
    // .mainblock__title
    &__title {
@@ -249,6 +273,11 @@ h6 {
       text-transform: uppercase;
       font-weight: 900;
       letter-spacing: 5.43px;
+      margin: 0px 0px 10px 0px;
+      @media screen and (max-width: $md3+px), screen and (max-height: 600px) {
+         font-size: 25px;
+         line-height: 30px;
+      }
    }
    // .mainblock__subtitle
    &__subtitle {
@@ -258,22 +287,114 @@ h6 {
    }
    // .mainblock__footer
    &__footer {
+      @include flexboxinline();
+      flex-direction: column;
    }
    // .mainblock__btn
    &__btn {
+      margin: 0px 0px 60px 0px;
+      @media screen and (max-width: $md3+px), screen and (max-height: 600px) {
+         margin: 0px 0px 30px 0px;
+      }
    }
    // .mainblock__arrow
    &__arrow {
+      position: relative;
+      animation: arrow 2s infinite ease;
    }
    // .mainblock__img
    &__img {
-      position: absolute;
+      position: fixed;
       width: 100%;
       height: 100%;
       top: 0;
       left: 0;
    }
 }
+
+@keyframes arrow {
+   0% {
+      top: 0;
+   }
+   50% {
+      top: 10px;
+   }
+   100% {
+      top: 0;
+   }
+}
+@-webkit-keyframes arrow {
+   0% {
+      top: 0;
+   }
+   50% {
+      top: 10px;
+   }
+   100% {
+      top: 0;
+   }
+}
+@-moz-keyframes arrow {
+   0% {
+      top: 0;
+   }
+   50% {
+      top: 10px;
+   }
+   100% {
+      top: 0;
+   }
+}
+@-o-keyframes arrow {
+   0% {
+      top: 0;
+   }
+   50% {
+      top: 10px;
+   }
+   100% {
+      top: 0;
+   }
+}
+//==================================================================================================
+.content {
+   position: relative;
+   background-color: #fff;
+   z-index: 10;
+}
+//==================================================================================================
+
+.menu {
+   // .menu_mb
+   &_mb {
+   }
+   // .menu__items
+   &__items {
+   }
+   // .menu__list
+   &__list {
+   }
+   // .menu__link
+   &__link {
+      color: #3c3c3c;
+      font-size: 15px;
+      text-transform: uppercase;
+      font-weight: 700;
+      @include anim(0.3s, 0s);
+      &:hover {
+         color: #ada074;
+      }
+      // .menu__link_act
+      &_act {
+         color: #ada074;
+      }
+   }
+}
+.container {
+}
+
+//==================================================================================================
+
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ UI СТИЛЕЙ, ФОРМ И ГОТОВЫХ КЛАССОВ>====================================================================================================
