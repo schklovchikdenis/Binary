@@ -216,19 +216,19 @@ h6 {
 
 //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 // @import "popup.scss";
-// @import "header.scss";
+@import "header.scss";
 @import "footer.scss";
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>============================================================================================
-//====================================================================================================
+//==================================================================================================
 
 .mainblock {
    flex: 1 1 auto;
    position: relative;
-   text-align: center;
    @include flexbox();
    justify-content: center;
+   text-align: center;
    padding: 50px 0px;
    @media screen and (max-width: $md3+px), screen and (max-height: 600px) {
       padding: 20px 0px;
@@ -254,7 +254,7 @@ h6 {
       color: #ffffff;
       position: relative;
       padding: 0px 0px 45px 0px;
-      margin: 30px;
+      margin: 30px 0px;
       &:after {
          content: "";
          position: absolute;
@@ -290,9 +290,10 @@ h6 {
       @include flexboxinline();
       flex-direction: column;
    }
+   // .mainblock__btn
    &__btn {
       margin: 0px 0px 60px 0px;
-      @media screen and (max-width: $md2+px), screen and (max-height: 700px) {
+      @media screen and (max-width: $md3+px), screen and (max-height: 600px) {
          margin: 0px 0px 30px 0px;
       }
    }
@@ -309,19 +310,53 @@ h6 {
       top: 0;
       left: 0;
    }
-   @keyframes arrow {
-      0% {
-         top: 0;
-      }
-      50% {
-         top: 10%;
-      }
-      100% {
-         top: 0%;
-      }
+}
+
+@keyframes arrow {
+   0% {
+      top: 0;
+   }
+   50% {
+      top: 10px;
+   }
+   100% {
+      top: 0;
    }
 }
-//====================================================================================================
+@-webkit-keyframes arrow {
+   0% {
+      top: 0;
+   }
+   50% {
+      top: 10px;
+   }
+   100% {
+      top: 0;
+   }
+}
+@-moz-keyframes arrow {
+   0% {
+      top: 0;
+   }
+   50% {
+      top: 10px;
+   }
+   100% {
+      top: 0;
+   }
+}
+@-o-keyframes arrow {
+   0% {
+      top: 0;
+   }
+   50% {
+      top: 10px;
+   }
+   100% {
+      top: 0;
+   }
+}
+//==================================================================================================
 .content {
    background-color: #fff;
    position: relative;
@@ -379,6 +414,7 @@ h6 {
    }
 }
 
+//==================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
