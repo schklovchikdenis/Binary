@@ -157,10 +157,10 @@ h6 {
   -ms-flex-pack: center;
   justify-content: center;
   text-align: center;
-  padding: 50px 0px; }
+  padding: 50px 0; }
   @media screen and (max-width: 767.98px), screen and (max-height: 600px) {
     .mainblock {
-      padding: 20px 0px; } }
+      padding: 20px 0; } }
   .mainblock__content {
     position: relative;
     z-index: 1;
@@ -189,21 +189,21 @@ h6 {
     color: #ffffff;
     position: relative;
     padding: 0px 0px 45px 0px;
-    margin: 30px 0px; }
+    margin: 30px 0; }
     .mainblock__text:after {
       content: "";
-      position: absolute;
-      bottom: 0px;
-      left: 50%;
-      margin: 0px 0px 0px -52.5px;
       width: 105px;
       height: 2px;
-      background-color: #fff; }
+      background-color: #fff;
+      position: absolute;
+      left: 50%;
+      margin: 0px 0px 0px -52.5px;
+      bottom: 0; }
   .mainblock__title {
+    font-weight: 900;
     font-size: 34px;
     line-height: 40px;
     text-transform: uppercase;
-    font-weight: 900;
     letter-spacing: 5.43px;
     margin: 0px 0px 10px 0px; }
     @media screen and (max-width: 767.98px), screen and (max-height: 600px) {
@@ -279,20 +279,58 @@ h6 {
   background-color: #fff;
   z-index: 10; }
 
-.menu__link {
-  color: #3c3c3c;
-  font-size: 15px;
-  text-transform: uppercase;
-  font-weight: 700;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -ms-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s; }
-  .menu__link:hover {
-    color: #ada074; }
-  .menu__link_act {
-    color: #ada074; }
+.menu {
+  padding: 22px 0px;
+  border-bottom: 1px solid #f2f2f2; }
+  .menu_mb {
+    margin: 0px 0px 130px 0px; }
+    @media (max-width: 992.98px) {
+      .menu_mb {
+        margin: 0px 0px 50px 0px; } }
+    @media (max-width: 767.98px) {
+      .menu_mb {
+        margin: 0px 0px 30px 0px; } }
+  .menu__list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .menu__list li {
+      margin: 0px 25px; }
+      @media (max-width: 767.98px) {
+        .menu__list li {
+          margin: 0px 15px 10px 15px; } }
+      @media (max-width: 767.98px) {
+        .menu__list li {
+          -webkit-box-flex: 0;
+          -ms-flex: 0 1 25%;
+          flex: 0 1 25%; } }
+    @media (max-width: 479.98px) {
+      .menu__list {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+  .menu__link {
+    color: #3c3c3c;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s; }
+    .menu__link:hover {
+      color: #ada074; }
+    .menu__link_act {
+      color: #ada074; }
 
 .form-row {
   display: -webkit-box;
@@ -315,15 +353,16 @@ h6 {
   line-height: 44px;
   text-transform: uppercase;
   font-size: 16px;
+  text-transform: uppercase;
   letter-spacing: 0.67px;
   position: relative; }
   .btn:after {
-    content: "";
+    content: '';
     position: absolute;
-    top: 0px;
-    left: 0px;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     -webkit-transform: scale(0);
@@ -339,6 +378,29 @@ h6 {
     border: 1px solid #fff; }
     .btn_w:after {
       background-color: #fff; }
+  .btn_b {
+    color: #000;
+    border: 1px solid #000; }
+    .btn_b:after {
+      background-color: #000; }
+  .btn span {
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    position: relative;
+    z-index: 1; }
+  .btn:hover.btn_w {
+    color: #000; }
+  .btn:hover.btn_b {
+    color: #fff; }
+  .btn:hover:after {
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
   .btn.fw {
     width: 100%; }
 
