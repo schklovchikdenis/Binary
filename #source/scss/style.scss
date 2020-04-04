@@ -364,9 +364,8 @@ h6 {
    z-index: 50;
 }
 .menu {
-   padding: 22px 0px;
+   padding: 22px 0;
    border-bottom: 1px solid #f2f2f2;
-   // .menu_mb
    &_mb {
       margin: 0px 0px 130px 0px;
       @media (max-width: $md2+px) {
@@ -392,8 +391,10 @@ h6 {
          @media (max-width: $md3+px) {
             margin: 0px 15px 10px 15px;
          }
-         @media (max-width: $md3+px) {
+         @media (max-width: $md4+px) {
+            margin: 0px 20px 20px 20px;
             flex: 0 1 25%;
+            text-align: center;
          }
       }
       @media (max-width: $md4+px) {
@@ -407,7 +408,6 @@ h6 {
       text-transform: uppercase;
       font-weight: 700;
       @include anim(0.3s, 0s);
-
       &:hover {
          color: #ada074;
       }
@@ -417,6 +417,85 @@ h6 {
    }
 }
 
+//==================================================================================================
+.about {
+   padding: 0px 0px 60px 0px;
+   // .about__header-block
+   &__header-block {
+      margin: 0px 0px 65px 0px;
+   }
+   // .about__body
+   &__body {
+      max-width: 900px;
+      text-align: center;
+      margin: 0px auto;
+   }
+   // .about__row
+   &__row {
+      @include flexbox();
+      margin: 0px -15px;
+      @media (max-width: $md3+px) {
+         display: block;
+      }
+   }
+   // .about__column
+   &__column {
+      flex: 0 1 33.333%;
+      padding: 0px 15px;
+      margin: 0px 0px 30px 0px;
+   }
+   // .about__item
+   &__item {
+      max-width: 260px;
+      text-align: center;
+      @media (max-width: $md3+px) {
+         max-width: none;
+      }
+   }
+   // .about__icon
+   &__icon {
+      border-radius: 50%;
+      width: 92px;
+      height: 92px;
+      border: 1px solid #f0f0f0;
+      @include flexboxinline();
+      justify-content: center;
+      align-items: center;
+      margin: 0px 0px 40px 0px;
+      &_l {
+         img {
+            position: relative;
+            left: 5px;
+         }
+      }
+      @media (max-width: $md3+px) {
+         margin: 0px 0px 10px 0px;
+      }
+   }
+   // .about__title
+   &__title {
+      color: #000000;
+      font-size: 22px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 3.52px;
+      margin: 0px 0px 33px 0px;
+      @media (max-width: $md3+px) {
+         margin: 0px 0px 15px 0px;
+      }
+      @media (max-width: $md2+px) {
+         font-size: 18px;
+         margin: 0px 0px 25px 0px;
+      }
+   }
+   // .about__text
+   &__text {
+      color: #868585;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 26px;
+   }
+}
 //==================================================================================================
 
 //==================================================================================================
