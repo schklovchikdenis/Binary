@@ -274,7 +274,7 @@ h6 {
       line-height: 40px;
       text-transform: uppercase;
       letter-spacing: 5.43px;
-      margin: 0px 0px 10px 0px;
+      margin: 0px 0px 20 0px;
       @media screen and (max-width: $md3+px), screen and (max-height: 600px) {
          font-size: 25px;
          line-height: 30px;
@@ -359,12 +359,10 @@ h6 {
 }
 //==================================================================================================
 .content {
-   position: relative;
    background-color: #fff;
-   z-index: 10;
+   position: relative;
+   z-index: 50;
 }
-//==================================================================================================
-
 .menu {
    padding: 22px 0px;
    border-bottom: 1px solid #f2f2f2;
@@ -377,6 +375,9 @@ h6 {
       @media (max-width: $md3+px) {
          margin: 0px 0px 30px 0px;
       }
+   }
+   @media (max-width: $md4+px) {
+      padding: 22px 0 12px 0;
    }
    // .menu__items
    &__items {
@@ -410,7 +411,6 @@ h6 {
       &:hover {
          color: #ada074;
       }
-      // .menu__link_act
       &_act {
          color: #ada074;
       }
