@@ -498,9 +498,10 @@ h6 {
 }
 //==================================================================================================
 .portfolio {
-   margin: px px;
+   margin: 107px 0px 62px 0px;
    // .portfolio__header-block
    &__header-block {
+      margin: 0px 0px 50px 0px;
    }
    // .portfolio__filter
    &__filter {
@@ -529,9 +530,17 @@ h6 {
 .filter {
    // .filter__list
    &__list {
+      @include flexbox();
+      justify-content: center;
+      align-items: center;      
    }
    // .filter__item
    &__item {
+      color: #3c3c3c;
+      font-size: 15px;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-weight: 700;
    }
 }
 .activ {

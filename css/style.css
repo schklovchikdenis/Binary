@@ -611,7 +611,30 @@ h6 {
     line-height: 26px; }
 
 .portfolio {
-  margin: px px; }
+  margin: 107px 0px 62px 0px; }
+  .portfolio__header-block {
+    margin: 0px 0px 50px 0px; }
+
+.filter__list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  font-size: 0;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.filter__item {
+  color: #3c3c3c;
+  font-size: 15px;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-weight: 700; }
 
 .form-row {
   display: -webkit-box;
