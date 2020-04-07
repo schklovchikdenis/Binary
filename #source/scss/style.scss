@@ -589,8 +589,8 @@ h6 {
       font-weight: 700;
       margin: 0px 25px;
       cursor: pointer;
-      &:active {
-         color: #ada074;
+      &.active {
+         color: #ada074;   
       }
       @media (max-width:$md3+px){
          margin: 0px 15px;
