@@ -545,6 +545,9 @@ h6 {
          flex: 1 1 100%;
          margin: 0px 0px 20px 0px;
       }
+      @media (max-width:$md4+px){
+         max-width: none;
+      }
    }
    // .portfolio__item
    &__item {
@@ -556,6 +559,9 @@ h6 {
    &__footer {
       text-align: center;
       padding: 35px 0px 0px 0px;
+      @media (max-width:$md3+px){
+         padding: 15px 0px 0px 0px;
+      }
    }
    // .portfolio__btn
    &__btn {
@@ -591,8 +597,6 @@ h6 {
       }
       
    }
-}
-.gallery {
 }
 
 //==================================================================================================
