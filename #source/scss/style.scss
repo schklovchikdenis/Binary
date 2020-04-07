@@ -420,9 +420,15 @@ h6 {
 //==================================================================================================
 .about {
    padding: 0px 0px 60px 0px;
+   @media (max-width:$md3+px){
+      padding: 0px 0px 10px 0px;
+   }
    // .about__header-block
    &__header-block {
       margin: 0px 0px 65px 0px;
+      @media (max-width:$md3+px){
+         margin: 0px 0px 30px 0px;
+      }
    }
    // .about__body
    &__body {
@@ -500,13 +506,28 @@ h6 {
 .portfolio {
    padding: 107px 0px 62px 0px;
    background-color: #f3f3f3;
+   @media (max-width:$md2+px){
+      padding: 50px 0px 30px 0px;
+   }
    // .portfolio__header-block
    &__header-block {
       margin: 0px 0px 50px 0px;
+      @media (max-width:$md2+px){
+         margin: 0px 0px 30px 0px;
+      }
+      @media (max-width:$md3+px){
+         margin: 0px 0px 20px 0px;
+      }
    }
    // .portfolio__filter
    &__filter {
       margin: 0px 0px 135px 0px;
+      @media (max-width:$md2+px){
+         margin: 0px 0px 50px 0px;
+      }
+      @media (max-width:$md3+px){
+         margin: 0px 0px 20px 0px;
+      }
    }
    // .portfolio__items
    &__items {
@@ -520,6 +541,10 @@ h6 {
       padding: 0px 15px;
       max-width: 50%;
       margin: 0px 0px 30px 0px;
+      @media (max-width:$md3+px){
+         flex: 1 1 100%;
+         margin: 0px 0px 20px 0px;
+      }
    }
    // .portfolio__item
    &__item {
@@ -561,6 +586,10 @@ h6 {
       &:active {
          color: #ada074;
       }
+      @media (max-width:$md3+px){
+         margin: 0px 15px;
+      }
+      
    }
 }
 .gallery {
