@@ -420,13 +420,13 @@ h6 {
 //==================================================================================================
 .about {
    padding: 0px 0px 60px 0px;
-   @media (max-width:$md3+px){
+   @media (max-width: $md3+px) {
       padding: 0px 0px 10px 0px;
    }
    // .about__header-block
    &__header-block {
       margin: 0px 0px 65px 0px;
-      @media (max-width:$md3+px){
+      @media (max-width: $md3+px) {
          margin: 0px 0px 30px 0px;
       }
    }
@@ -506,26 +506,26 @@ h6 {
 .portfolio {
    padding: 107px 0px 62px 0px;
    background-color: #f3f3f3;
-   @media (max-width:$md2+px){
+   @media (max-width: $md2+px) {
       padding: 50px 0px 30px 0px;
    }
    // .portfolio__header-block
    &__header-block {
       margin: 0px 0px 50px 0px;
-      @media (max-width:$md2+px){
+      @media (max-width: $md2+px) {
          margin: 0px 0px 30px 0px;
       }
-      @media (max-width:$md3+px){
+      @media (max-width: $md3+px) {
          margin: 0px 0px 20px 0px;
       }
    }
    // .portfolio__filter
    &__filter {
       margin: 0px 0px 135px 0px;
-      @media (max-width:$md2+px){
+      @media (max-width: $md2+px) {
          margin: 0px 0px 50px 0px;
       }
-      @media (max-width:$md3+px){
+      @media (max-width: $md3+px) {
          margin: 0px 0px 20px 0px;
       }
    }
@@ -541,11 +541,11 @@ h6 {
       padding: 0px 15px;
       max-width: 50%;
       margin: 0px 0px 30px 0px;
-      @media (max-width:$md3+px){
+      @media (max-width: $md3+px) {
          flex: 1 1 100%;
          margin: 0px 0px 20px 0px;
       }
-      @media (max-width:$md4+px){
+      @media (max-width: $md4+px) {
          max-width: none;
       }
    }
@@ -559,7 +559,7 @@ h6 {
    &__footer {
       text-align: center;
       padding: 35px 0px 0px 0px;
-      @media (max-width:$md3+px){
+      @media (max-width: $md3+px) {
          padding: 15px 0px 0px 0px;
       }
    }
@@ -590,15 +590,44 @@ h6 {
       margin: 0px 25px;
       cursor: pointer;
       &.active {
-         color: #ada074;   
+         color: #ada074;
       }
-      @media (max-width:$md3+px){
+      @media (max-width: $md3+px) {
          margin: 0px 15px;
       }
-      
    }
 }
 
+//==================================================================================================
+.partners {
+   background: url("../img/partners/bg.jpg") center/cover no-repeat;
+   padding: 100px 0px 70px 0px;
+   // .partners__title
+   &__title {
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 300;
+      letter-spacing: 1.8px;
+      text-align: center;
+      margin: 0px 0px 90px 0px;
+   }
+   // .partners__items
+   &__items {
+      @include flexbox();
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+   }
+   // .partners__column
+   &__column {
+      padding: 0px 50px;
+      margin: 0px 0px 30px 0px;
+   }
+   // .partners__item
+   &__item {
+   }
+}
 //==================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
