@@ -602,7 +602,7 @@ h6 {
 .partners {
    background: url("../img/partners/bg.jpg") center/cover no-repeat;
    padding: 100px 0px 70px 0px;
-   @media (max-width:$md3+px){
+   @media (max-width: $md3+px) {
       padding: 50px 0px 30px 0px;
    }
    // .partners__title
@@ -613,7 +613,7 @@ h6 {
       letter-spacing: 1.8px;
       text-align: center;
       margin: 0px 0px 90px 0px;
-      @media (max-width:$md3+px){
+      @media (max-width: $md3+px) {
          margin: 0px 0px 45px 0px;
       }
    }
@@ -629,10 +629,10 @@ h6 {
    &__column {
       padding: 0px 50px;
       margin: 0px 0px 30px 0px;
-      @media (max-width:$md3+px){
+      @media (max-width: $md3+px) {
          padding: 0px 23px;
       }
-      @media (max-width:$md4+px){
+      @media (max-width: $md4+px) {
          flex: 0 1 50%;
          padding: 0px 5px;
       }
@@ -640,6 +640,142 @@ h6 {
    // .partners__item
 
    &__item {
+   }
+}
+//==================================================================================================
+.contact {
+   // .contact__header-block
+   &__header-block {
+   }
+   // .contact__body
+   &__body {
+   }
+   // .contact__column
+   &__column {
+   }
+   // .contact__form
+   &__form {
+   }
+   // .contact__text
+   &__text {
+   }
+   // .contact__name
+   &__name {
+   }
+   // .contact__soc
+   &__soc {
+   }
+   // .contact__email
+   &__email {
+   }
+}
+.container {
+}
+.header-block {
+}
+.form-contact {
+   // .form-contact__body
+   &__body {
+   }
+   // .form-contact__column
+   &__column {
+   }
+   // .form-contact__input
+   &__input {
+   }
+   // .form-contact__label
+   &__label {
+   }
+}
+.input {
+}
+.soc {
+   // .soc__facbook
+   &__facbook {
+   }
+   // .soc__linke
+   &__linke {
+   }
+}
+.send {
+   // .send__btn
+   &__btn {
+   }
+}
+.btn {
+   // .btn_b
+   &_b {
+   }
+}
+
+//==================================================================================================
+.contact {
+   padding: 100px 100px;
+   // .contact__header-block
+   &__header-block {
+      margin: 0px 0px 115px 0px;
+   }
+   // .contact__body
+   &__body {
+   }
+   // .contact__column
+   &__column {
+   }
+   // .contact__form
+   &__form {
+   }
+   // .contact__text
+   &__text {
+   }
+   // .contact__name
+   &__name {
+   }
+   // .contact__soc
+   &__soc {
+   }
+   // .contact__email
+   &__email {
+   }
+}
+.container {
+}
+.header-block {
+   // .header-block__title
+   &__title {
+   }
+}
+.form-contact {
+   // .form-contact__body
+   &__body {
+   }
+   // .form-contact__column
+   &__column {
+   }
+   // .form-contact__input
+   &__input {
+   }
+   // .form-contact__label
+   &__label {
+   }
+}
+.input {
+}
+.soc {
+   // .soc__facbook
+   &__facbook {
+   }
+   // .soc__linke
+   &__linke {
+   }
+}
+.send {
+   // .send__btn
+   &__btn {
+   }
+}
+.btn {
+   // .btn_b
+   &_b {
    }
 }
 //==================================================================================================

@@ -746,6 +746,11 @@ h6 {
         flex: 0 1 50%;
         padding: 0px 5px; } }
 
+.contact {
+  padding: 100px 100px; }
+  .contact__header-block {
+    margin: 0px 0px 115px 0px; }
+
 .form-row {
   display: -webkit-box;
   display: -moz-box;
