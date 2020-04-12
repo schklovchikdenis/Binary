@@ -277,7 +277,7 @@ function tip(){
 		$(this).toggleClass('active');
 	});
 }
-
+//Fullscreen
 $(window).resize(function(event) {
 	mainblock();
 });
@@ -286,7 +286,7 @@ function mainblock(){
 	$('.mainblock').css('min-height',h);
 }
 mainblock();
-
+//Filter
 $('.filter__item').click(function(event) { 
 	var i=$(this).data('filter');
 	if (i ==1) {
@@ -299,4 +299,9 @@ $('.filter__item').click(function(event) {
 	$(this).addClass('active');
 
 	return false;
+});
+// Paralax
+$(window).scroll(function (event) {
+	var s = 0 - $(this).scrollTop() / 2;
+	$('.mainblock__img').css('transform', 'translate3d(0, ' + s + 'px, 0)');
 });
